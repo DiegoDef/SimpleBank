@@ -67,7 +67,7 @@ public class Customer extends Person {
 					+ "(S- SIM, N-NÃO)");
 			//char answer = sc.next().charAt(0);
 			//sc.nextLine();
-			char answer = 'S'; //erro, arrumar mais tarde
+			char answer = 'S'; //erro, arrumar mais tarde e fazer teste
 			if (answer == 'S' || answer == 's') 
 			{
 				askForCreditIncrease();
@@ -79,16 +79,18 @@ public class Customer extends Person {
 
 
 	@SuppressWarnings("unused")
-	public void askForCreditIncrease() 
+	public boolean askForCreditIncrease() 
 	{
 		if (creditScore < 1000000000) 
 		{
 	    	System.out.println("Seu pedido de crédito foi negado.");
+	    	return false;
 	    } 
 		else 
 	    {
 			System.out.println("Seu pedido de crédito foi aceito mas./n"
 					+ "Segue novo valor do seu salário: R$ "+ this.credit);
+			return true;
 	    }
 	}
 	
@@ -102,6 +104,10 @@ public class Customer extends Person {
 	
 	public int getIdUser() {
 		return userId;
+	}
+	
+	public float getBalance() {
+		return balance;
 	}
 
 }

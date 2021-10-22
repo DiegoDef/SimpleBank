@@ -18,17 +18,19 @@ public class Employee extends Person {
 	
 	
 	@SuppressWarnings("unused")
-	public void askSalaryIncrease(float raise_amount) 
+	public boolean askSalaryIncrease(float raise_amount) 
 	{
 		raise_amount = 0; // ignored
 	    
 		if (importance < 1000000000) {
 	    	System.out.println("Seu pedido de aumento de salário foi negado.");
+	    	return false;
 	    } else {
 	    	this.salary += 5;
 			System.out.println("Seu pedido de aumento foi aceito mas "
 					+ "com um valor diferente do pedido.\nSegue novo valor "
 					+ "do seu salário: R$ "+ this.salary);
+			return true;
 	    }
 	
 	}
