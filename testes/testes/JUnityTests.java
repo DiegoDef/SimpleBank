@@ -1,7 +1,7 @@
 package testes;
 
 import org.junit.Before;
-import org.junit.Test; lucas mondini
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
